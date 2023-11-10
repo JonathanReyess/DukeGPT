@@ -29,6 +29,10 @@ To make sure you have .NET installed run the following command in your terminal:
 dotnet --version
 ```
 
+### Environment
+
+Fill in the appropriate keys which can be found within your Azure service in /DukeGPT/settings/appsettings.json along with your publishing profile. 
+
 ### Web Chat
 
 If you are on Mac, make sure you have disabled airplay in order to run the bot in the web chat within Bot Framework Composer.
@@ -50,6 +54,7 @@ https://github.com/Microsoft/BotFramework-Emulator/releases/tag/v4.14.1
 ### Publishing a Bot 
 
 The current chatbot is using the resources listed in the publishing_profile.txt file. 
+
 
 
 
