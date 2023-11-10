@@ -1,0 +1,13 @@
+{
+  "profileName": "DukeGPT",
+  "jobId": "234d2fac-d579-4afe-b284-8362d25e9bc4",
+  "projectId": "27451.02894437559",
+  "time": "2023-07-31T20:06:01.244Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: cog-openai-codeplus-dev-eastus-001 at eastus",
+    "Deploying Web App Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}

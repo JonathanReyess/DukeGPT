@@ -1,0 +1,288 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "name": "DukeGPT001",
+    "description": "",
+    "id": "4pM5gc"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720",
+        "comment": "This trigger runs when a conversation update activity is sent to the bot. This indicates a user or bot being added or removed from a conversation."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item",
+            "comment": "For each member added to the conversation."
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else",
+                "comment": "Checks that that member added ID does not match the bot ID. This prevents the greeting message from being sent when the bot is added to a conversation."
+              },
+              "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "PlH6iz",
+                    "comment": "Launches the WelcomeDialog containing logic for greeting users."
+                  },
+                  "activityProcessed": true,
+                  "dialog": "WelcomeDialog"
+                }
+              ]
+            }
+          ],
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "oePoXr",
+        "name": "Feedback"
+      },
+      "intent": "Feedback",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "KtFYej"
+          },
+          "activityProcessed": true,
+          "dialog": "FeedbackDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "FOxcnx",
+        "comment": "This trigger fires when an incoming activity is not handled by any other trigger."
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "W8P8hp"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://openai-dev-codeplus-eastus-001.openai.azure.com/openai/deployments/DukeGPT/extensions/chat/completions?api-version=2023-06-01-preview",
+          "headers": {
+            "Content-Type": "application/json",
+            "api-key": "014455515f174979b4283780d8ac96a9"
+          },
+          "body": {
+            "dataSources": [
+              {
+                "type": "AzureCognitiveSearch",
+                "parameters": {
+                  "endpoint": "https://cogsearch-s1-codeplus-dev-eastus-001.search.windows.net",
+                  "key": "TlbIpkUhmNDwhc9w9Og05va79boho72n5B1IJdqiinAzSeDU9x9a",
+                  "indexName": "knowledge-base-duke-gpt-001",
+                  "inScope": true,
+                  "queryType": "semantic",
+                  "semanticConfiguration": "default"
+                }
+              }
+            ],
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are an AI assistant that helps Duke University affiliates find information. Do not answer questions unrelated to the content you are provided."
+              },
+              {
+                "role": "user",
+                "content": "${turn.activity.text}"
+              }
+            ],
+            "temperature": 0,
+            "stream": false
+          },
+          "contentType": "application/json",
+          "responseType": "json"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "WbFA8k"
+          },
+          "activity": "${SendActivity_WbFA8k()}"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "7A5cFW"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_7A5cFW()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.result",
+          "style": "suggestedAction",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "PZWhoi"
+          },
+          "condition": "dialog.result == True",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "70YRub"
+              },
+              "activity": "${SendActivity_70YRub()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "QmlhG1"
+              },
+              "activity": "${SendActivity_QmlhG1()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "OdCvGO"
+          }
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "a9a3ef",
+        "name": "Person"
+      },
+      "intent": "Person",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "YQ6BP2"
+          },
+          "activityProcessed": true,
+          "dialog": "PersonDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "OnReminderConversation",
+      "$designer": {
+        "id": "0oXXNC",
+        "name": "Reminder conversation"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "mstS4u"
+          },
+          "activity": "${SendActivity_mstS4u()}"
+        }
+      ],
+      "ReminderAfterSeconds": 30
+    },
+    {
+      "$kind": "OnSessionExpireConversation",
+      "$designer": {
+        "id": "TzXmjw",
+        "name": "Session Expire conversation"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Ug657k"
+          },
+          "activity": "${SendActivity_Ug657k()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "JINi2Q"
+          },
+          "resultProperty": "turn.results",
+          "method": "POST",
+          "url": "https://dukemail.azurewebsites.net:443/api/send-email/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=1S-Z7XLB4uXgAOyNH7HLROLQrOPIbLJ1e97jJ7KT2A0",
+          "body": {
+            "to": "${user.email}",
+            "subject": "[date] - Duke Bot Chat History",
+            "email_body": "Hello,\nThank you for using ____. Your chat history is attached.\nPlease do not reply to this email, this inbox is not monitored."
+          }
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "thy5l4"
+          },
+          "activityProcessed": true,
+          "dialog": "FeedbackDialog"
+        }
+      ],
+      "ExpireAfterSeconds": 60
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "m6kZlX",
+        "name": "Hello"
+      },
+      "intent": "Hello",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "via97h"
+          },
+          "activityProcessed": true,
+          "dialog": "HelloDialog"
+        }
+      ]
+    }
+  ],
+  "generator": "DukeGPT.lg",
+  "id": "DukeGPT001",
+  "recognizer": {
+    "$kind": "Microsoft.CluRecognizer",
+    "projectName": "DukeGPT",
+    "endpoint": "https://dukegpt-clu.cognitiveservices.azure.com/",
+    "endpointKey": "55631457f65f40e8ae4adfa75cb68d3c",
+    "deploymentName": "07-28-23"
+  }
+}

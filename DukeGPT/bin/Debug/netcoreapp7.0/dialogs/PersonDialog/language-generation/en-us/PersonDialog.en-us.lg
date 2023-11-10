@@ -1,0 +1,32 @@
+[import](common.lg)
+
+# SendActivity_Q3xkpe()
+[Activity
+    Text = ${SendActivity_Q3xkpe_text()}
+    Attachments = ${json(SendActivity_Q3xkpe_attachment_HWMUFY())}
+]
+
+# SendActivity_Q3xkpe_text()
+- Sorry we couldn't help you! 
+# SendActivity_Q3xkpe_attachment_HWMUFY()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": " "
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Connect to a Person",
+      "url": "https://duke.service-now.com/$chat_support.do?queueID=8c28ce9d91206400f03e3891d38c4418"
+    }
+  ]
+}
+```

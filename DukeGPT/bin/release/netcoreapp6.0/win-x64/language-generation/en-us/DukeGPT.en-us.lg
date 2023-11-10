@@ -1,0 +1,56 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+
+# SendActivity_DidNotUnderstand_text()
+- $(turn.result.content.choices[0].messages[1].content)
+# SendActivity_WbFA8k()
+[Activity
+    Text = ${SendActivity_WbFA8k_text()}
+]
+
+# SendActivity_WbFA8k_text()
+- ```${turn.results.content.choices[0].messages[1].content}
+```
+# ConfirmInput_Prompt_7A5cFW()
+[Activity
+    Text = ${ConfirmInput_Prompt_7A5cFW_text()}
+]
+
+# ConfirmInput_Prompt_7A5cFW_text()
+- Did this answer your question?
+# SendActivity_70YRub()
+[Activity
+    Text = ${SendActivity_70YRub_text()}
+]
+
+# SendActivity_70YRub_text()
+- I'm glad we could answer your question. Is there anything else we can help you with? 
+# SendActivity_QmlhG1()
+[Activity
+    Text = ${SendActivity_QmlhG1_text()}
+]
+
+# SendActivity_QmlhG1_text()
+- I'm sorry we could not answer your question. Is there anything else we can help you with?
+# SendActivity_mstS4u()
+[Activity
+    Text = ${SendActivity_mstS4u_text()}
+]
+
+# SendActivity_mstS4u_text()
+- Are you still there?
+# SendActivity_Ug657k()
+[Activity
+    Text = ${SendActivity_Ug657k_text()}
+]
+
+# SendActivity_Ug657k_text()
+- Your session has expired. A copy of your conversation will be sent to your email. 

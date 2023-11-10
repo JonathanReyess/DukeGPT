@@ -1,0 +1,38 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "35Cbe2",
+    "name": "PersonDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "JOXmhE"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Q3xkpe"
+          },
+          "activity": "${SendActivity_Q3xkpe()}"
+        }
+      ]
+    }
+  ],
+  "generator": "PersonDialog.lg",
+  "recognizer": {
+    "$kind": "Microsoft.CluRecognizer",
+    "projectName": "DukeGPT",
+    "endpoint": "https://dukegpt-clu.cognitiveservices.azure.com/",
+    "endpointKey": "55631457f65f40e8ae4adfa75cb68d3c",
+    "deploymentName": "07-28-23"
+  },
+  "id": "PersonDialog"
+}

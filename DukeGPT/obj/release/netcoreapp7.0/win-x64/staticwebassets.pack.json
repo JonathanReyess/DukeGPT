@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/wwwroot/default.htm",
+      "PackagePath": "staticwebassets/default.htm"
+    },
+    {
+      "Id": "obj/release/netcoreapp7.0/win-x64/staticwebassets/msbuild.DukeGPT.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/release/netcoreapp7.0/win-x64/staticwebassets/msbuild.build.DukeGPT.props",
+      "PackagePath": "build\\DukeGPT.props"
+    },
+    {
+      "Id": "obj/release/netcoreapp7.0/win-x64/staticwebassets/msbuild.buildMultiTargeting.DukeGPT.props",
+      "PackagePath": "buildMultiTargeting\\DukeGPT.props"
+    },
+    {
+      "Id": "obj/release/netcoreapp7.0/win-x64/staticwebassets/msbuild.buildTransitive.DukeGPT.props",
+      "PackagePath": "buildTransitive\\DukeGPT.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "rF3ZOHGl50gkv3FQJBdRw1MgrT8yOQkpIsC3vvEBG4E=",
+  "Source": "DukeGPT",
+  "BasePath": "_content/DukeGPT",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DukeGPT/wwwroot",
+      "Source": "DukeGPT",
+      "ContentRoot": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/wwwroot/",
+      "BasePath": "_content/DukeGPT",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/wwwroot/default.htm",
+      "SourceId": "DukeGPT",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/wwwroot/",
+      "BasePath": "_content/DukeGPT",
+      "RelativePath": "default.htm",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/default.htm"
+    }
+  ]
+}

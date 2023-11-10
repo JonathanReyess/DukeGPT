@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/jonathanreyes/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/jonathanreyes/.nuget/packages/</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.6.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/jonathanreyes/.nuget/packages/" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)microsoft.bot.components.recognizers.clurecognizer/1.0.0/contentFiles/any/netstandard2.0/Schemas/Microsoft.CluRecognizer.schema" Condition="Exists('$(NuGetPackageRoot)microsoft.bot.components.recognizers.clurecognizer/1.0.0/contentFiles/any/netstandard2.0/Schemas/Microsoft.CluRecognizer.schema')">
+      <NuGetPackageId>Microsoft.Bot.Components.Recognizers.CLURecognizer</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Schemas/Microsoft.CluRecognizer.schema</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnReminderConversation.schema" Condition="Exists('$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnReminderConversation.schema')">
+      <NuGetPackageId>Bot.Builder.Community.Components.Trigger.SessionAgent</NuGetPackageId>
+      <NuGetPackageVersion>1.0.10</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>schema/OnReminderConversation.schema</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnReminderConversation.uischema" Condition="Exists('$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnReminderConversation.uischema')">
+      <NuGetPackageId>Bot.Builder.Community.Components.Trigger.SessionAgent</NuGetPackageId>
+      <NuGetPackageVersion>1.0.10</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>schema/OnReminderConversation.uischema</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnSessionExpireConversation.schema" Condition="Exists('$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnSessionExpireConversation.schema')">
+      <NuGetPackageId>Bot.Builder.Community.Components.Trigger.SessionAgent</NuGetPackageId>
+      <NuGetPackageVersion>1.0.10</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>schema/OnSessionExpireConversation.schema</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnSessionExpireConversation.uischema" Condition="Exists('$(NuGetPackageRoot)bot.builder.community.components.trigger.sessionagent/1.0.10/contentFiles/any/netstandard2.0/schema/OnSessionExpireConversation.uischema')">
+      <NuGetPackageId>Bot.Builder.Community.Components.Trigger.SessionAgent</NuGetPackageId>
+      <NuGetPackageVersion>1.0.10</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>schema/OnSessionExpireConversation.uischema</Link>
+    </Content>
+  </ItemGroup>
+</Project>

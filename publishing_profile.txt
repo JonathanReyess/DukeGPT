@@ -1,0 +1,45 @@
+{
+  "name": "DukeGPT",
+  "environment": "dev",
+  "tenantId": "",
+  "hostname": "DukeGPT",
+  "runtimeIdentifier": "win-x64",
+  "resourceGroup": "cog-openai-codeplus-dev-eastus-001",
+  "botName": "DukeGPT",
+  "subscriptionId": "",
+  "region": "eastus",
+  "appServiceOperatingSystem": "windows",
+  "scmHostDomain": "",
+  "luisResource": "",
+  "settings": {
+    "applicationInsights": {
+      "InstrumentationKey": "",
+      "connectionString": ""
+    },
+    "cosmosDb": {
+      "cosmosDBEndpoint": "",
+      "authKey": "",
+      "databaseId": "botstate-db",
+      "containerId": "botstate-container"
+    },
+    "blobStorage": {
+      "connectionString": "",
+      "container": ""
+    },
+    "luis": {
+      "authoringKey": "",
+      "authoringEndpoint": "",
+      "endpointKey": "",
+      "endpoint": "",
+      "region": "westus"
+    },
+    "qna": {
+      "subscriptionKey": "",
+      "endpoint": ""
+    },
+    "MicrosoftAppId": "",
+    "MicrosoftAppPassword": ""
+  }
+}
+
+NGROK File path: /Users/jonathanreyes/Library/Caches/Homebrew/downloads/7e1f74e01d4e455ef42860e8f15eca11d881189c6e529b8d1c8266ae142de9f0--ngrok-v3-3.3.2-darwin-arm64.zip

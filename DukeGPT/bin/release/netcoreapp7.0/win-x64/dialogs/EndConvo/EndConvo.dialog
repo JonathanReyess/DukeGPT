@@ -1,0 +1,54 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "TZwyqN",
+    "name": "EndConvo",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "SvUR2s"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Ask",
+          "$designer": {
+            "id": "dEG4LJ"
+          },
+          "activity": "${Ask_Activity_dEG4LJ()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnMessageActivity",
+      "$designer": {
+        "id": "qK7fBm",
+        "name": "Message received (Message received activity)"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "bR1Pzs"
+          },
+          "activity": "${SendActivity_bR1Pzs()}"
+        }
+      ]
+    }
+  ],
+  "generator": "EndConvo.lg",
+  "recognizer": {
+    "$kind": "Microsoft.CluRecognizer",
+    "projectName": "DukeGPT",
+    "endpoint": "https://dukegpt-clu.cognitiveservices.azure.com/",
+    "endpointKey": "55631457f65f40e8ae4adfa75cb68d3c",
+    "deploymentName": "07-28-23"
+  },
+  "id": "EndConvo"
+}

@@ -1,0 +1,44 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "jXjjaX",
+    "name": "HelloDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "09uSxa"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "lkYX52"
+          },
+          "activity": "${SendActivity_lkYX52()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "dmRLZx"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "HelloDialog.lg",
+  "recognizer": {
+    "$kind": "Microsoft.CluRecognizer",
+    "projectName": "DukeGPT",
+    "endpoint": "https://dukegpt-clu.cognitiveservices.azure.com/",
+    "endpointKey": "55631457f65f40e8ae4adfa75cb68d3c",
+    "deploymentName": "07-28-23"
+  },
+  "id": "HelloDialog"
+}

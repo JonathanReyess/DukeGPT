@@ -1,0 +1,109 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/DukeGPT.csproj": {}
+  },
+  "projects": {
+    "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/DukeGPT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/DukeGPT.csproj",
+        "projectName": "DukeGPT",
+        "projectPath": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/DukeGPT.csproj",
+        "packagesPath": "/Users/jonathanreyes/.nuget/packages/",
+        "outputPath": "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jonathanreyes/Desktop/DukeGPT/DukeGPT/DukeGPT/NuGet.Config",
+          "/Users/jonathanreyes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://botbuilder.myget.org/F/botbuilder-v4-dotnet-daily/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "netcoreapp7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "netcoreapp7.0",
+          "dependencies": {
+            "Bot.Builder.Community.Components.Storage": {
+              "target": "Package",
+              "version": "[4.13.5, )"
+            },
+            "Bot.Builder.Community.Components.Trigger.SessionAgent": {
+              "target": "Package",
+              "version": "[1.0.10, )"
+            },
+            "Bot.Builder.Community.Dialogs.Prompts": {
+              "target": "Package",
+              "version": "[4.13.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.Bot.Builder.AI.Luis": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Microsoft.Bot.Builder.AI.QnA": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Microsoft.Bot.Builder.Azure.Blobs": {
+              "target": "Package",
+              "version": "[4.20.1, )"
+            },
+            "Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Microsoft.Bot.Components.Recognizers.CLURecognizer": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.Bot.Components.Welcome": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

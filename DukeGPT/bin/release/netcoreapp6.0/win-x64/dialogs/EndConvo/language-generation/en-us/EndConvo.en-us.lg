@@ -1,0 +1,46 @@
+[import](common.lg)
+
+# Ask_Activity_dEG4LJ()
+[Activity
+    Text = ${Ask_Activity_dEG4LJ_text()}
+    Attachments = ${json(Ask_Activity_dEG4LJ_attachment_DmfMiF())}
+]
+
+# Ask_Activity_dEG4LJ_text()
+- Thank you for using DukeGPT! We hope to see you again soon!
+# Ask_Activity_dEG4LJ_attachment_DmfMiF()
+- ```
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "type": "AdaptiveCard",
+  "body": [
+      {            
+          "type": "TextBlock",
+          "size": "Medium",
+          "weight": "Bolder",
+          "text": "Please provide your feedback:"
+      },
+      {
+          "type": "Input.Text",
+          "placeholder": "",
+          "id": "username"
+      }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "actions": [
+      {
+          "type": "Action.Submit",
+          "title": "Submit"
+      }
+  ]
+}
+```
+# SendActivity_bR1Pzs()
+[Activity
+    Text = ${SendActivity_bR1Pzs_text()}
+]
+
+# SendActivity_bR1Pzs_text()
+- Your feedback has been submitted!

@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# SendActivity_lkYX52()
+[Activity
+    Text = ${SendActivity_lkYX52_text()}
+]
+
+# SendActivity_lkYX52_text()
+- Hello! Is there anything I can help you with?
+- Hey! Ask me anything!
+- Hey! How can I help?

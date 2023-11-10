@@ -1,0 +1,54 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "iHWenQ",
+    "name": "FeedbackDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "azvnMS"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Ask",
+          "$designer": {
+            "id": "LAeEob"
+          },
+          "activity": "${Ask_Activity_LAeEob()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnMessageActivity",
+      "$designer": {
+        "id": "lA9W8X",
+        "name": "Message received (Message received activity)"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "I14RVW"
+          },
+          "activity": "${SendActivity_I14RVW()}"
+        }
+      ]
+    }
+  ],
+  "generator": "FeedbackDialog.lg",
+  "recognizer": {
+    "$kind": "Microsoft.CluRecognizer",
+    "projectName": "DukeGPT",
+    "endpoint": "https://dukegpt-clu.cognitiveservices.azure.com/",
+    "endpointKey": "55631457f65f40e8ae4adfa75cb68d3c",
+    "deploymentName": "07-28-23"
+  },
+  "id": "FeedbackDialog"
+}
