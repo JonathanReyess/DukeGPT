@@ -1,5 +1,7 @@
 # DukeGPT
 
+2023 Code+ Program project where we worked with Duke’s Office of Information Technology, Microsoft, and partners across campus to design and develop an AI customer service chat platform for Duke University.
+
 ## 
 
 ## Getting Started
