@@ -48,15 +48,12 @@ DukeGPT supports various dialogs to handle different scenarios:
 
 - **Greeting**: Handles greetings from users.
 - **Feedback**: Manages user feedback.
-- **Unknown Intent**: Deals with unknown user intents.
+- **Unknown Intent**: Deals with unknown user intents by routing to our configured GPT 3.5 Turbo model. 
 - **Person**: Manages conversations related to a person.
 - **Reminder Conversation**: Handles reminders.
 - **Session Expire Conversation**: Manages sessions that are about to expire.
 - **HelloDialog**: Initiates a conversation with a hello.
-- **EndConvo**: Ends the conversation.
+- **EndConvo**: Ends the conversation and stores chat history in our Blob Storage
 
 Feel free to explore and modify these dialogs based on your requirements!
 
-## Contributions
-
-Contributions to DukeGPT are welcome. If you encounter any issues or have suggestions, please create a new issue or pull request. Let's make DukeGPT even better together!
