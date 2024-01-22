@@ -11,7 +11,7 @@ To run DukeGPT locally, follow these simple steps.
 Clone the project using the following command in your terminal:
 
 ```bash
-git clone -b DukeGPT https://gitlab.oit.duke.edu/codeplus/fixit_ai.git
+git clone git@github.com:JonathanReyess/DukeGPT.git
 ```
 
 ### .NET Core SDK
