@@ -46,14 +46,13 @@ The current chatbot uses the resources listed in the `publishing_profile.txt` fi
 
 DukeGPT supports various dialogs to handle different scenarios:
 
-- **Greeting**: Handles greetings from users.
-- **Feedback**: Manages user feedback.
+- **Greeting**: Handles different greetings from users and when to initiates the conversation.
+- **Feedback**: The dialog prompts users to provide feedback, collects their input,and stores it in Azure Blob Storage for easy access.
 - **Unknown Intent**: Deals with unknown user intents by routing to our configured GPT 3.5 Turbo model. 
 - **Person**: Manages conversations related to a person.
-- **Reminder Conversation**: Handles reminders.
-- **Session Expire Conversation**: Manages sessions that are about to expire.
-- **HelloDialog**: Initiates a conversation with a hello.
-- **EndConvo**: Ends the conversation and stores chat history in our Blob Storage
+- **Reminder Conversation**: Action is performed automatically when there is no interaction between the user and bot within a timeframe.
+- **Session Expire Conversation**: Manages when the session expires due to lack of activity.
+- **EndConvo**: Ends the conversation, stores chat history in our Blob Storage and sends an email to the user with Azure Logic Apps. 
 
 Feel free to explore and modify these dialogs based on your requirements!
 
